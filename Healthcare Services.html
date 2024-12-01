@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar {
+      background-color: #45C2B0;
+      padding: 10px 0;
+    }
+
+    .navbar .logo img {
+      max-width: 50px;
+    }
+
+    .navbar-nav {
+      margin: 0 auto;
+    }
+
+    .navbar-nav a {
+      color: white;
+      font-weight: 500;
+      padding: 10px 30px;
+      text-decoration: none;
+    }
+
+    .navbar-nav a:hover {
+      color: #7e7e7e;
+    }
+
+    .user-greeting {
+      color: white;
+      font-weight: bold;
+    }
+
+    .features-container {
+      margin-top: -50px; /* Adjust this value to control the overlap */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Updated Navigation Bar (Green Header) -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container d-flex align-items-center">
+      <!-- Replacing text with an image for TataCare -->
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <img src="Images/logo trans.png" alt="TataCare Logo" style="height: 55px; width: 50px;">
+        <h4 class="ms-2 mb-0" style="color: white; font-weight: bold;">TataCare</h4>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item px-3"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="Doctor profile list.html">Doctor Profiles</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="about us.html">About Us</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="Healthcare Services.html">Services</a></li>
+        </ul>
+        <div class="user-greeting">Hi, Aishvariya <span class="badge bg-warning text-dark">A</span></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Healthcare Section -->
+  <section class="healthcare-section">
+    <div class="container-fluid p-0">
+      <!-- Banner Section -->
+      <div class="banner position-relative">
+        <img src="Images/hospital.jpg" alt="Healthcare" class="img-fluid w-100" style="height: 400px; object-fit: cover;">
+        <div class="banner-text position-absolute top-50 start-50 translate-middle text-center">
+          <h1 style="font-size: 5rem; color: white; font-weight: bold; text-transform: uppercase; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">
+            Healthcare
+          </h1>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="container features-container">
+        <div class="row text-center">
+          <!-- Feature Cards -->
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="card border-1 shadow-sm rounded-3">
+              <div class="card-body">
+                <h6 class="card-title fw-bold">Instant Video Consultation.</h6>
+                <a href="Book Appointment.html" class="btn btn-outline-success rounded-pill">Book Consultation</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="card border-1 shadow-sm rounded-3">
+              <div class="card-body">
+                <h6 class="card-title fw-bold">24/7 Medicine.</h6>
+                <a href="24-7 Medical.html" class="btn btn-outline-warning rounded-pill">Buy Medicine</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="card border-1 shadow-sm rounded-3">
+              <div class="card-body">
+                <h6 class="card-title fw-bold">Find The Doctors Near You.</h6>
+                <a href="Doctor profile list.html" class="btn btn-outline-primary rounded-pill">Doctor Profiles</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <div class="card border-1 shadow-sm rounded-3">
+              <div class="card-body">
+                <h6 class="card-title fw-bold">Lab Tests.</h6>
+                <a href="lab tests.html" class="btn btn-outline-danger rounded-pill">Book Tests</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

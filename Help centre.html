@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tata Care</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Inline Styles -->
+    <style>
+      :root {
+        --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        font-family: "Inter", var(--default-font-family);
+      }
+
+      .navbar {
+        background-color: #45c2b0;
+        padding: 10px 0;
+      }
+
+      .navbar-brand {
+        background-color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .nav-link,
+      .user-greeting {
+        color: white !important;
+        font-weight: bold;
+      }
+
+      .navbar-nav {
+        justify-content: center;
+        flex-grow: 1;
+      }
+
+      .how-can-we-help {
+        font-family: "Poppins", var(--default-font-family);
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #000;
+        margin-top: 30px;
+      }
+
+      .btn-outline-secondary {
+        font-family: "Poppins", var(--default-font-family);
+        font-size: 1.25rem;
+        padding: 15px;
+        color: #000;
+      }
+
+      input.form-control {
+        font-size: 1rem;
+      }
+
+      .btn-lg {
+        font-size: 1rem;
+      }
+      .btn a{
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="container d-flex align-items-center">
+        <!-- Replacing text with an image for TataCare -->
+        <img
+          src="Images/logo trans.png"
+          alt="TataCare"
+          class="navbar-brand"
+          id="menuToggle"
+          style="height: 55px; width: 50px"
+        />
+        <h4 style="color: white">Tatacare</h4>
+        <ul class="navbar-nav d-flex flex-row">
+          <li class="nav-item px-3"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="Doctor profile list.html">Doctor Profiles</a>
+          </li>
+          <li class="nav-item px-3"><a class="nav-link" href="about us.html">About Us</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="Healthcare Services.html">Services</a></li>
+        </ul>
+        <div class="user-greeting">
+          Hi, Aishvariya <span class="badge bg-warning text-dark">A</span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container text-center py-5">
+        <h1 class="how-can-we-help">How can we help you?</h1>
+
+        <div class="input-group my-4 w-50 mx-auto">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search Keywords..."
+          />
+          <button class="btn btn-warning" type="button">
+            <i class="bi bi-search"></i> <!-- Bootstrap icon for search -->
+          </button>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-4 my-3">
+            <button class="btn btn-lg btn-outline-secondary w-100">
+              Contact Us
+            </button>
+          </div>
+          <div class="col-md-4 my-3">
+            <button class="btn btn-lg btn-outline-secondary w-100">
+              Technical Support
+            </button>
+          </div>
+          <div class="col-md-4 my-3">
+            <button class="btn btn-lg btn-outline-secondary w-100">
+              Live Chat Assistant
+            </button>
+          </div>
+          <div class="col-md-4 my-3">
+            <button class="btn btn-lg btn-warning w-100"><a href="FAQs.html">FAQs</a></button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

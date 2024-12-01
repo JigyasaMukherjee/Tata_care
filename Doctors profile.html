@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tata Hospital - Doctor Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .navbar {
+      background-color: #45C2B0;
+      padding: 10px 0;
+    }
+    .navbar-brand {
+      background-color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .nav-link, .user-greeting {
+      color: white !important;
+      font-weight: bold;
+    }
+    .navbar-nav {
+      justify-content: center;
+      flex-grow: 1;
+    }
+    .user-greeting {
+      padding-right: 10px;
+    }
+
+    .profile-card, .availability-card {
+        border: 2px solid black;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .profile-img {
+        width: 100%;
+        height: 150px;
+        max-width: 150px;
+        border-radius: 50%;
+    }
+    .doctor-info p {
+        margin-bottom: 5px; /* Reduced line spacing */
+        text-align: left;   /* Left-align the text */
+    }
+    .table td {
+        cursor: pointer;
+    }
+    .selected-date {
+        background-color: #ffc107 !important;
+        color: white;
+    }
+    .btn a{
+        text-decoration: none;
+        color: black;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container d-flex align-items-center">
+          <!-- Replacing text with an image for TataCare -->
+          <img src="Images/logo trans.png" alt="TataCare" class="navbar-brand" id="menuToggle" style="height: 55px; width: 50px;">
+          <h4 style="color: white;">Tatacare</h3>
+          <ul class="navbar-nav d-flex flex-row">
+            <li class="nav-item px-3"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item px-3"><a class="nav-link" href="Doctor profile list.html">Doctor Profiles</a></li>
+            <li class="nav-item px-3"><a class="nav-link" href="about us.html">About Us</a></li>
+            <li class="nav-item px-3"><a class="nav-link" href="Healthcare Services.html">Services</a></li>
+          </ul>
+          <div class="user-greeting">Hi, Aishvariya <span class="badge bg-warning text-dark">A</span></div>
+        </div>
+      </nav>
+
+    <div class="container my-5">
+        <div class="row">
+            <!-- Doctor Profile Card -->
+            <div class="col-md-6">
+                <div class="profile-card">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="Images/doctor profile.jpg" alt="Doctor Image" class="profile-img">
+                        </div>
+                        <div class="col-md-8 doctor-info">
+                            <h4 class="mt-3">Dr. Name</h4>
+                            <p><strong>Gender:</strong> [Gender]</p>
+                            <p><strong>Department:</strong> [Department]</p>
+                            <p><strong>Specialization:</strong> [Specialization]</p>
+                            <p style="color: #45C2B0;"><strong>Experience:</strong> [Experience Years] + No. of Surgeries</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mt-2">
+                        <div class="col-md-12 doctor-info">
+                            <h5>Contact Details</h5>
+                            <p>Email: [Email]</p>
+                            <p>Phone: [Phone Number]</p>
+                            
+                            <h5>Qualifications</h5>
+                            <ul>
+                                <li>MBBS</li>
+                                <li>MSC</li>
+                                <li>Other Degrees</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Availability Calendar -->
+            <div class="col-md-6">
+                <div class="availability-card">
+                    <h4>Check Availability</h4>
+                    <div class="d-flex justify-content-center">
+                        <table class="table table-bordered text-center">
+                            <thead>
+                                <tr>
+                                    <th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th><th>S</th>
+                                </tr>
+                            </thead>
+                            <tbody id="calendar-body">
+                                <tr>
+                                    <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+                                </tr>
+                                <tr>
+                                    <td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+                                </tr>
+                                <tr>
+                                    <td>29</td><td>30</td><td>31</td><td></td><td></td><td></td><td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="btn btn-warning w-100 mt-3" id="book-btn"><a href="Book Appointment.html">Book Appointment</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const calendarBody = document.getElementById('calendar-body');
+        const bookButton = document.getElementById('book-btn');
+        let selectedDate = null;
+
+        // Add click event to each table cell (date)
+        calendarBody.addEventListener('click', (event) => {
+            if (event.target.tagName === 'TD' && event.target.textContent.trim() !== '') {
+                // Deselect previous selection
+                if (selectedDate) {
+                    selectedDate.classList.remove('selected-date');
+                }
+                // Select new date
+                selectedDate = event.target;
+                selectedDate.classList.add('selected-date');
+            }
+        });
+
+        // Booking button event
+        bookButton.addEventListener('click', () => {
+            if (selectedDate) {
+                alert(`Appointment booked for date: ${selectedDate.textContent}`);
+            } else {
+                alert('Please select a date first.');
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
