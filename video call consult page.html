@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TataCare - Online Consultation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Header Styling */
+    .navbar {
+      background-color: #45C2B0;
+      padding: 10px 0;
+    }
+
+    .navbar .logo img {
+      max-width: 50px;
+    }
+
+    .navbar-nav {
+      margin: 0 auto;
+    }
+
+    .navbar-nav a {
+      color: white;
+      font-weight: 500;
+      padding: 10px 30px;
+      text-decoration: none;
+    }
+
+    .navbar-nav a:hover {
+      color: #7e7e7e;
+    }
+
+    .user-greeting {
+      color: white;
+      font-weight: bold;
+    }
+
+    .badge {
+      font-size: 14px;
+    }
+
+    /* Consult Section Styling */
+    .consult-section {
+      padding: 40px 0;
+    }
+
+    .consult-title {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .doctor-dropdown {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .description {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .consult-image img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container d-flex align-items-center">
+      <div class="logo me-3">
+        <img src="Images/logo trans.png" alt="TataCare" style="height: 55px; width: 50px;">
+      </div>
+      <h4 style="color: white; font-weight: bold; margin: 0;">Tatacare</h4>
+      <ul class="navbar-nav d-flex flex-row">
+        <li class="nav-item px-3"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="Doctor profile list.html">Doctor Profiles</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="about us.html">About Us</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="Healthcare Services.html">Services</a></li>
+      </ul>
+      <div class="user-greeting ms-auto">Hi, Aishvariya <span class="badge bg-warning text-dark">A</span></div>
+    </div>
+  </nav>
+
+  <!-- Consult Section -->
+  <div class="container consult-section">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="consult-title">Consult Specialist doctor online on videocall and chat</h2>
+        <form>
+          <label for="doctor" class="form-label mt-3">Choose a Doctor:</label>
+          <select id="doctor" class="form-select doctor-dropdown">
+            <option selected disabled>Choose a doctor...</option>
+            <option value="1">Dr. John Doe</option>
+            <option value="2">Dr. Jane Smith</option>
+            <option value="3">Dr. Emily Davis</option>
+          </select>
+        </form>
+        <p class="description">See a doctor online in minutes!</p>
+      </div>
+      <div class="col-md-6 consult-image">
+        <img src="Images/videocon.jpg" alt="Doctor on Video Call">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
